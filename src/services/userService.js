@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = "https://c1s4i0-8080.bytexl.dev/api/users";
+const API_URL = import.meta.env.VITE_API_URL+"/api/users";
 
 const getAllTrainers = async () => {
   const response = await axios.get(`${API_URL}/trainers`);

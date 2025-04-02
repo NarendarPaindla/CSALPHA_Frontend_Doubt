@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL="https://c1s4i0-8080.bytexl.dev/api/appointments";
+const API_URL = import.meta.env.VITE_API_URL+"/api/appointments";
 
 
 const bookAppointment= async (appointment)=>{

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL="https://c1s4i0-8080.bytexl.dev/api/doubts";
+const API_URL = import.meta.env.VITE_API_URL+"/api/doubts";
 
 const askDoubt = async (doubt) => {
     const response = await axios.post(`${API_URL}/ask`, doubt);
@@ -14,7 +14,7 @@ const askDoubt = async (doubt) => {
     const response = await axios.post(`${API_URL}/reply/${doubtId}`, reply);
     return response.data;
   };
-  
+
   export default {
     askDoubt,
     getAllDoubts,

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL="https://c1s4i0-8080.bytexl.dev/api/auth";
+const API_URL = import.meta.env.VITE_API_URL+"/api/auth";
 const register =async(user)=>{
     const response=await axios.post(`${API_URL}/register`,user);
     return response.data;
